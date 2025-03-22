@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapde Chor - Saste Fashion</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #f4c542;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #f4c542;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .btn:hover {
+            background-color: #ffae00;
+        }
+        .meme-container {
+            margin-top: 50px;
+        }
+        .meme-img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #f4c542;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kapde Chor 👕🔥</h1>
+    <p>Kapde itne saste, lagta hai chor bazaar se uthaye! 😂</p>
+    <button class="btn" onclick="alert('Nahi milega! 😂')">Bhaiya Zyada Mat Lena</button>
+
+    <!-- Meme Corner -->
+    <div class="meme-container">
+        <h2>Meme Corner 🤣</h2>
+        <img id="meme" src="https://i.imgflip.com/4/30b1gx.jpg" alt="Meme" class="meme-img">
+        <br>
+        <button class="btn" onclick="loadMeme()">Load Another Meme</button>
+    </div>
+
+    <script>
+        const memes = [
+            "https://i.imgflip.com/30b1gx.jpg", // Distracted Boyfriend
+            "https://i.imgflip.com/2/26am.jpg", // Spongebob Mock
+            "https://i.imgflip.com/4/1bij.jpg", // Drake Meme
+            "https://i.imgflip.com/4/2fm6x.jpg", // Expanding Brain
+            "https://i.imgflip.com/4/2wifvo.jpg" // Change My Mind
+        ];
+
+        function loadMeme() {
+            const randomMeme = memes[Math.floor(Math.random() * memes.length)];
+            document.getElementById("meme").src = randomMeme;
+        }
+    </script>
+</body>
+</html>
